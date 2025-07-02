@@ -1,0 +1,239 @@
+/* <div> 레이아웃 */
+#wrapper{
+ width:1340px; 
+ margin:auto;
+}
+/* ----------------------------------------- */
+form {
+  position: relative;
+  width: 800px;
+  margin: auto;
+  text-align: center;
+  height: auto;
+  border: 4px solid saddlebrown;
+  border-radius: 20px;
+  background-color: cornsilk;
+  padding-bottom: 40px;
+}
+
+#title {
+  width: auto;
+  height: auto;
+  border: none;
+  text-align: center;
+  color: saddlebrown;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: cornsilk;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+select {
+  position: absolute;
+  right:-65px;
+  width: auto;
+  height: auto;
+  border: 2px solid saddlebrown;
+  margin: 0px;
+  margin-left: 600px;
+  font-size: 30px;
+  visibility: hidden;
+  color : saddlebrown;
+  z-index:3;
+}
+
+.selBar {
+  text-align: right;
+  width: 95%;
+  padding-top: 40px;
+}
+
+.icon{
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+hr {
+  width: 650px;
+  height: 5px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: saddlebrown;
+}
+
+img, #lyrics {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 20px;
+}
+
+#lyrics {
+  position: absolute;
+  z-index: 1;
+  top: 201.5px;
+  left: 99px;
+  width:553px;
+  height:556px;
+  border: 5px solid burlywood;
+  color: saddlebrown;
+  font-family: serif;
+  font-size: 25px;
+  background-color: white;
+  overflow:hidden; /* 기본 스크롤바 숨김 */
+  padding: 20px 20px 20px 20px;
+  visibility: hidden;
+  resize: none; /* resize 요소 안보이게*/
+  opacity: 0.9;
+}
+
+img:hover ~ #lyrics{ 
+  visibility:visible;
+}
+
+#lyrics:hover {
+  cursor: pointer;
+  visibility: visible;
+  overflow-y: scroll;
+}
+
+/* 스크롤바 전체 영역 */
+#lyrics::-webkit-scrollbar {
+  display: block;
+    width: 20px;  
+    height: 20px;
+}
+
+#lyrics::-webkit-scrollbar-thumb {
+    background:  rgba(139, 69, 19, 0.8); /* 스크롤바 색상 */
+    border-radius: 10px; /* 스크롤바 둥근 테두리 */
+}
+
+#lyrics::-webkit-scrollbar-track {
+  background: burlywood; 
+  border-radius: 20px; 
+}
+
+#lyrics::-webkit-scrollbar-button:vertical:single-button {
+  background: burlywood;
+  color: saddlebrown;
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px; 
+  width: 20px;
+  height: 20px;
+}
+
+#imglyr:hover {
+  visibility:visible;
+}
+
+.icon:hover {
+  cursor: pointer;
+  background-color: moccasin;
+  border-radius: 15px;
+}
+
+.icon select {
+  display: block;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 70px;
+}
+
+.tooltip .tooltiptext {
+  width: 130px;
+  height: 40px;
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  top: -65%;
+  left: -20px;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  font-size: 30px;
+  background-color: saddlebrown;
+  color: cornsilk;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* tooltip에 호버되면, tooltiptext 노출 */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.button {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: moccasin;
+}
+
+.up { 
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  height: auto;
+  width: 100%;
+}
+
+#song {
+  visibility: hidden;
+}
+
+#musicbar {
+  -webkit-appearance: none; /*기본 스타일 덮어쓰기*/
+  width: 650px;
+  height: 5px;
+  margin: auto;
+  margin-top: 80px;
+  background: saddlebrown;
+}
+
+#musicbar::-webkit-slider-thumb { /*바 아이콘*/
+  -webkit-appearance: none;/*기본 스타일 덮어쓰기*/
+  width: 30px;
+  height: 30px;
+  background: burlywood;
+  border-radius: 40%;
+  border: 5px solid saddlebrown;
+}
+
+#musicbar:hover, #musicbar::-webkit-slider-thumb:hover {
+  cursor: pointer;
+}
+
+.curTime, .totTime { 
+  width: 100px;
+  border: none;
+  margin-bottom: 80px;
+  text-align: center;
+  color: saddlebrown;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.curTime {
+  margin-right: 450px;
+}
+
+.totTime {
+  margin-right: 5px;
+}

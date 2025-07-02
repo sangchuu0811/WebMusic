@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="MusicFrame.css">
+    <meta charset="UTF-8">
+    <title>MusicFrame01</title>
+    <script src = "jquery-3.7.1.js"></script>
+  </head>
+  <body>
+    <br><br>
+    <div id="wrapper">
+        <form name="list" onSubmit="return false">
+          <div class="selBar">
+
+            <div class="tooltip">
+              <input type="image" src="./Img/select.png" class="icon" onclick="ListOn()">
+              <span class="tooltiptext">List</span>
+            </div>
+            <div class="tooltip">
+              <input type="image" src="./Img/noloop.png" id="loop" class="icon" onclick = "mLoop()">
+              <span class="tooltiptext">한곡 반복</span>
+            </div>
+            <div class="tooltip">
+              <input type="image" src="./Img/Nolyrics.png" id="lyr" class="icon">
+              <span class="tooltiptext">가사</span>
+            </div>
+          </div>
+            <select name="musicList" id="musicList" size="9" onclick="choice(value)">
+              <option value="DRIP - babymonster" selected="selected">DRIP - babymonster</option>
+              <option value="The Chase - Hearts2Hearts">The Chase - Hearts2Hearts</option>
+              <option value="Whiplash - aespa">Whiplash - aespa</option>
+              <option value="Daredevil - Lyn">Daredevil - Lyn</option>
+              <option value="Carnival - Gain">Carnival - Gain</option>
+              <option value="분홍신 - IU">분홍신 - IU</option>
+              <option value="후라이의 꿈 - 악동뮤지션">후라이의 꿈 - 악동뮤지션</option>
+              <option value="Savage - aespa">Savage - aespa</option>
+              <option value="DUMDi DUMDi - IDLE">DUMDi DUMDi - IDLE</option>
+              <option value="Oh my god - IDLE">Oh my god - IDLE</option>
+            </select>
+          
+          <div class="up">
+            <input type="text" id="title" disabled>
+          </div>
+
+            <img src="./Img/drip.png"><br>
+            <textarea id="lyrics" disabled></textarea>
+            
+          <input type="range" id="musicbar" min="0" max="100"><br>
+          <input type="text" id="currTime" class="curTime" disabled>
+          <input type="text" id="totalTime" class="totTime" disabled><br>
+          <!--<hr>-->
+
+          <input type="image" src="./Img/goFirst.png" value="first" class="button" onclick="cliBtn(value)">
+          <input type="image" src="./Img/before.png" value="before" class="button" onclick="cliBtn(value)">
+          <input type="image" src="./Img/pause.png" value="playpause" id="playpause" class="button" onclick="mPlayPause()">
+          <input type="image" src="./Img/next.png" value="next" class="button" onclick="cliBtn(value)">
+          <input type="image" src="./Img/goLast.png" value="last" class="button" onclick="cliBtn(value)">
+          <input type="image" src="./Img/stop.png" value="stop" class="button" onclick="mStop()">
+                  
+        </div>
+        <audio id="song" controls>
+          <source id="mp3_src" src="./Music/drip.mp3" type="audio/mpeg">
+        </audio> 
+    <script src="MusicFrame.js"></script>
+  </body>
+</html>
